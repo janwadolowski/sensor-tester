@@ -1,19 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <fragment
-        android:id="@+id/nav_host_fragment_content_main"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/nav_graph" />
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="370dp"
+        android:layout_height="159dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="190dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/accelerometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            tools:text="akcelerometr"
+            tools:visibility="visible" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/giroskop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="żyroskop" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/proximity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="zbliżeniowy" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/photodetector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="fotodetektor" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/magnetometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="magnetometr" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/barometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="barometr" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/gravity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="grawitacyjny" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Hall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Halla" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/fingerprint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="linii papilarnych" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="385dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="112dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Tester sensorów urządzenia"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/chipGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="571dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="<value>"
+            android:textAlignment="textEnd" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="<unit>"
+            android:textAlignment="textStart" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
