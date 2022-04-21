@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Sensor_tester.iml" filepath="$PROJECT_DIR$/.idea/modules/Sensor_tester.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Sensor_tester.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Sensor_tester.app.iml" />
-    </modules>
-  </component>
-</project>
