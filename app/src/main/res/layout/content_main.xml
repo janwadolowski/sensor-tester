@@ -10,113 +10,177 @@
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chipGroup"
         android:layout_width="0dp"
-        android:layout_height="159dp"
+        android:layout_height="0dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginBottom="50dp"
         android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/sensorValue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-        <LinearLayout
-            android:id="@+id/ll1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        app:layout_constraintTop_toBottomOf="@+id/main_title"
+        app:singleLine="false"
+        app:singleSelection="true">
+
+
         <com.google.android.material.chip.Chip
             android:id="@+id/accelerometer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight=".1"
+            android:checkable="true"
+            android:checked="true"
+            android:text="@string/accelerometer"
             android:textAlignment="center"
-            android:visibility="visible"
-            tools:text="akcelerometr"
-            tools:visibility="visible" />
+            app:checkedIconTint="@color/green"
+            app:checkedIconVisible="true"
+            app:singleSelection="true"
+            tools:text="@string/accelerometer" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/giroskop"
+            android:id="@+id/gravity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight=".1"
+            android:checkable="true"
+            android:text="@string/gravity"
             android:textAlignment="center"
-            tools:text="żyroskop" />
+            app:checkedIconTint="@color/green"
+            app:checkedIconVisible="true"
+            app:singleSelection="true"
+            tools:text="@string/gravity" />
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/gyroscope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/gyroscope"
+            android:textAlignment="center"
+            app:checkedIconTint="@color/green"
+            app:checkedIconVisible="true"
+            app:singleSelection="true"
+            tools:text="@string/gyroscope" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/light"
+            android:textAlignment="center"
+            app:checkedIconTint="@color/green"
+            app:checkedIconVisible="true"
+            app:singleSelection="true"
+            tools:text="@string/light" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/linear_acceleration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/linear_acceleration"
+            android:textAlignment="center"
+            app:checkedIconTint="@color/green"
+            app:checkedIconVisible="true"
+            app:singleSelection="true"
+            tools:text="@string/linear_acceleration" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/magnetic_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/magnetic_field"
+            android:textAlignment="center"
+            app:checkedIconTint="@color/green"
+            app:checkedIconVisible="true"
+            app:singleSelection="true"
+            tools:text="@string/magnetic_field" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/orientation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/orientation"
+            android:textAlignment="center"
+            app:checkedIconTint="@color/green"
+            app:checkedIconVisible="true"
+            app:singleSelection="true"
+            tools:text="@string/orientation" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/pressure"
+            android:textAlignment="center"
+            app:checkedIconTint="@color/green"
+            app:checkedIconVisible="true"
+            app:singleSelection="true"
+            tools:text="@string/pressure" />
+
 
         <com.google.android.material.chip.Chip
             android:id="@+id/proximity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight=".1"
+            android:checkable="true"
+            android:text="@string/proximity"
             android:textAlignment="center"
-            tools:text="zbliżeniowy" />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ll2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-        <com.google.android.material.chip.Chip
-            android:id="@+id/photodetector"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight=".1"
-            android:textAlignment="center"
-            tools:text="fotodetektor" />
+            app:checkedIconTint="@color/green"
+            app:checkedIconVisible="true"
+            app:singleSelection="true"
+            tools:text="@string/proximity" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/magnetometer"
+            android:id="@+id/rotation_vector"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight=".1"
+            android:checkable="true"
+            android:text="@string/rotation_vector"
             android:textAlignment="center"
-            tools:text="magnetometr" />
+            app:checkedIconTint="@color/green"
+            app:checkedIconVisible="true"
+            app:singleSelection="true"
+            tools:text="@string/rotation_vector" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/barometer"
+            android:id="@+id/wifi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight=".1"
+            android:checkable="true"
+            android:text="@string/wifi"
             android:textAlignment="center"
-            tools:text="barometr" />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ll3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight=".1"
-            android:orientation="horizontal">
-        <com.google.android.material.chip.Chip
-            android:id="@+id/gravity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight=".1"
-            android:textAlignment="center"
-            tools:text="grawitacyjny" />
+            app:checkedIconTint="@color/green"
+            app:checkedIconVisible="true"
+            app:singleSelection="true"
+            tools:text="@string/wifi" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/Hall"
+            android:id="@+id/bluetooth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight=".1"
+            android:checkable="true"
+            android:text="@string/bluetooth"
             android:textAlignment="center"
-            tools:text="Halla" />
+            app:checkedIconTint="@color/green"
+            app:checkedIconVisible="true"
+            app:singleSelection="true"
+            tools:text="@string/bluetooth" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/fingerprint"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight=".1"
-            android:textAlignment="center"
-            tools:text="linii papilarnych" />
-        </LinearLayout>
     </com.google.android.material.chip.ChipGroup>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/main_title"
         android:layout_width="0dp"
         android:layout_height="48dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="112dp"
+        android:layout_marginEnd="10dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/main_title"
         android:textAlignment="center"
@@ -124,41 +188,47 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:typeface="sans"
-        app:layout_constraintBottom_toTopOf="@+id/chipGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/sensorName"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="40dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="100dp"
-        android:baselineAligned="false"
-        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeMinTextSize="12sp"
+        android:gravity="start"
+        android:hint="nazwa sensora"
+        android:textAlignment="textStart"
+        android:textColor="@color/green"
+        app:layout_constraintBottom_toTopOf="@+id/sensorValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/sensorValue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeMinTextSize="8sp"
+        android:gravity="start"
+        android:hint="odczyt z sensora"
+        android:textAlignment="textStart"
+        android:textColor="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:gravity="end"
-            android:text="<value>"
-            android:textAlignment="textEnd"
-            android:textSize="20sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:gravity="start"
-            android:text="<unit>"
-            android:textAlignment="textStart"
-            android:textSize="20sp" />
-    </LinearLayout>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

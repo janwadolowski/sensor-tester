@@ -5,4 +5,17 @@
 
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="main_title">Tester sensorów urządzenia</string>
+    <string name="gyroscope">żyroskop</string>
+    <string name="gravity">grawitacyjny</string>
+    <string name="accelerometer">akcelerometr</string>
+    <string name="light">światło</string>
+    <string name="linear_acceleration">przysp. liniowe</string>
+    <string name="magnetic_field">pole magnetyczne</string>
+    <string name="orientation">kompas 3D</string>
+    <string name="pressure">ciśnienie</string>
+    <string name="proximity">zbliżeniowy</string>
+    <string name="relative_humidity">wilg. względna</string>
+    <string name="rotation_vector">wektor obr.</string>
+    <string name="wifi">wifi rssi</string>
+    <string name="bluetooth">bluetooth</string>
 </resources>
