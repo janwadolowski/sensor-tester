@@ -10,13 +10,11 @@
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chipGroup"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="190dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="50dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/sensorValue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -196,8 +194,9 @@
     <TextView
         android:id="@+id/sensorName"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="34dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_weight="1"
         android:autoSizeMaxTextSize="34sp"
@@ -208,14 +207,14 @@
         android:textColor="@color/green"
         app:layout_constraintBottom_toTopOf="@+id/sensorValue"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
 
     <TextView
         android:id="@+id/sensorValue"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="30dp"
         android:layout_weight="1"
@@ -229,6 +228,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/sensorName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
