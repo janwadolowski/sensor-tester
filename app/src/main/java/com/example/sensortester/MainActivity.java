@@ -8,18 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.chip.Chip;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
 
@@ -37,26 +31,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private Sensor currentSensor;
     private TextView value;
     private TextView name;
-
-//    private SensorEventListener sensorEventListener = new SensorEventListener() {
-//        @Override
-//        public void onSensorChanged(SensorEvent sensorEvent) {
-//            StringBuilder stringBuilder = new StringBuilder();
-//            char dim = 'X';
-//            for (float value:sensorEvent.values) {
-//                stringBuilder.append(String.valueOf(dim)).append(": ");
-//                stringBuilder.append(String.valueOf(value));
-//                stringBuilder.append("\n");
-//                dim += 1;
-//            }
-//            sensorValue.setText(stringBuilder.toString());
-//        }
-//
-//        @Override
-//        public void onAccuracyChanged(Sensor sensor, int i) {
-//
-//        }
-//    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,11 +69,13 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL);
         name.setText("Odczyt z sensora: " + accelerometer.getName());
+        String dummy = "<oczekiwanie na pomiar>";
 
         chipAccelerometer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sensorManager.unregisterListener(MainActivity.this);
+                value.setText(dummy);
                 currentSensor = accelerometer;
                 name.setText("Odczyt z sensora: " + currentSensor.getName());
                 sensorManager.registerListener(MainActivity.this, currentSensor, SensorManager.SENSOR_DELAY_NORMAL);
@@ -110,6 +86,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             @Override
             public void onClick(View view) {
                 sensorManager.unregisterListener(MainActivity.this);
+                value.setText(dummy);
                 currentSensor = gravity;
                 name.setText("Odczyt z sensora: " + currentSensor.getName());
                 sensorManager.registerListener(MainActivity.this, currentSensor, SensorManager.SENSOR_DELAY_NORMAL);
@@ -119,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             @Override
             public void onClick(View view) {
                 sensorManager.unregisterListener(MainActivity.this);
+                value.setText(dummy);
                 currentSensor = gyroscope;
                 name.setText("Odczyt z sensora: " + currentSensor.getName());
                 sensorManager.registerListener(MainActivity.this, currentSensor, SensorManager.SENSOR_DELAY_NORMAL);
@@ -128,6 +106,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             @Override
             public void onClick(View view) {
                 sensorManager.unregisterListener(MainActivity.this);
+                value.setText(dummy);
                 currentSensor = light;
                 name.setText("Odczyt z sensora: " + currentSensor.getName());
                 sensorManager.registerListener(MainActivity.this, currentSensor, SensorManager.SENSOR_DELAY_NORMAL);
@@ -137,6 +116,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             @Override
             public void onClick(View view) {
                 sensorManager.unregisterListener(MainActivity.this);
+                value.setText(dummy);
                 currentSensor = linearAcceleration;
                 name.setText("Odczyt z sensora: " + currentSensor.getName());
                 sensorManager.registerListener(MainActivity.this, currentSensor, SensorManager.SENSOR_DELAY_NORMAL);
@@ -146,6 +126,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             @Override
             public void onClick(View view) {
                 sensorManager.unregisterListener(MainActivity.this);
+                value.setText(dummy);
                 currentSensor = magneticField;
                 name.setText("Odczyt z sensora: " + currentSensor.getName());
                 sensorManager.registerListener(MainActivity.this, currentSensor, SensorManager.SENSOR_DELAY_NORMAL);
@@ -155,6 +136,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             @Override
             public void onClick(View view) {
                 sensorManager.unregisterListener(MainActivity.this);
+                value.setText(dummy);
                 currentSensor = orientation;
                 name.setText("Odczyt z sensora: " + currentSensor.getName());
                 sensorManager.registerListener(MainActivity.this, currentSensor, SensorManager.SENSOR_DELAY_NORMAL);
@@ -164,6 +146,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             @Override
             public void onClick(View view) {
                 sensorManager.unregisterListener(MainActivity.this);
+                value.setText(dummy);
                 currentSensor = pressure;
                 name.setText("Odczyt z sensora: " + currentSensor.getName());
                 sensorManager.registerListener(MainActivity.this, currentSensor, SensorManager.SENSOR_DELAY_NORMAL);
@@ -173,6 +156,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             @Override
             public void onClick(View view) {
                 sensorManager.unregisterListener(MainActivity.this);
+                value.setText(dummy);
                 currentSensor = proximity;
                 name.setText("Odczyt z sensora: " + currentSensor.getName());
                 sensorManager.registerListener(MainActivity.this, currentSensor, SensorManager.SENSOR_DELAY_NORMAL);
@@ -183,6 +167,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             @Override
             public void onClick(View view) {
                 sensorManager.unregisterListener(MainActivity.this);
+                value.setText(dummy);
                 currentSensor = rotationVector;
                 name.setText("Odczyt z sensora: " + currentSensor.getName());
                 sensorManager.registerListener(MainActivity.this, currentSensor, SensorManager.SENSOR_DELAY_NORMAL);
